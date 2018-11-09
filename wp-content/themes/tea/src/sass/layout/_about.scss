@@ -1,0 +1,34 @@
+#about {
+    padding: 260px 0 120px;
+    overflow: hidden;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: 260px;
+        left: 50%;
+        right: 0;
+        bottom: 0;
+        background: #def4d9;
+        z-index: -5;
+    }
+}
+
+.about-video { 
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    @extend %img;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding-top: 200px;
+    }
+}
+
+.about-item {
+
+    p {
+        margin-bottom: 20px;
+    }
+}

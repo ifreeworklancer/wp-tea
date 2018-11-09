@@ -1,0 +1,27 @@
+@import "../../fonts/fonts.css";
+
+@import "config/variables";
+@import "config/placeholders";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "base/body";
+@import "base/btn";
+@import "base/section";
+@import "base/layout";
+
+@import "modules/menu";
+@import "modules/product-card";
+@import "modules/sliders";
+@import "modules/forms";
+@import "modules/video";
+
+@import "layout/header";
+@import "layout/intro";
+@import "layout/best";
+@import "layout/exclusive";
+@import "layout/about";
+@import "layout/contacts";
+@import "layout/footer";
+
+@import "layout/page-thanks";

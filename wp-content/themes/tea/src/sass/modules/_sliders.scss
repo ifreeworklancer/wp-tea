@@ -1,0 +1,145 @@
+.best-slider {
+
+    &-item {
+        width: 100%;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 50%;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+            width: 33.33333%;
+        }
+    }
+}
+
+.exclusive-slider {
+
+    &-item {
+        width: 100%;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            width: 50%;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+            width: 33.33333%;
+        }
+    }
+}
+
+.flickity-page-dots {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    bottom: -40px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 320px;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        bottom: -10px !important;
+    }
+
+    li {
+        flex: 1 0 auto;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        height: 2px !important;
+        background: #d7d7d7;
+        opacity: 1;
+        transition: .5s;
+
+        &.is-selected {
+            height: 3px !important;
+            background: $primary;
+        }
+    }
+}
+
+.slider-arrow {
+    display: flex;
+    margin-top: 25px;
+
+    &-item {
+        display: flex;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+
+        .icon {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transition: .5s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0;
+                height: 0;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+            transition: .5s;
+        }
+
+        &--next {
+            margin-left: 10px;
+
+            .icon {
+                background: #333;
+                margin-left: 5px;
+
+                &::before {
+                    left: 55%;
+                    border-style: solid;
+                    border-width: 4px 0 4px 7px;
+                    border-color: transparent transparent transparent #fff;
+                }
+            }
+
+            .text {
+                color: #333333;
+            }
+        }
+
+        &--prev {
+            margin-right: 10px;
+
+            .icon {
+                background: #8d8d8d;
+                margin-right: 5px;
+
+                &::before {
+                    left: 45%;
+                    border-style: solid;
+                    border-width: 4px 7px 4px 0;
+                    border-color: transparent #fff transparent transparent;
+                }
+            }
+
+            .text {
+                color: #8d8d8d;
+            }
+        }
+
+        &:hover {
+
+            .icon {
+                background: $primary;
+            }
+
+            .text {
+                color: $primary;
+            }
+        }
+    }
+}

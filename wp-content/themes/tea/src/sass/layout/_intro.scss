@@ -1,0 +1,64 @@
+#intro {
+    height: 100vh;
+    max-height: 1080px;
+    background: url('../images/bg/intro-bg.jpg') 50% 50% /cover no-repeat;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        height: auto;
+        padding: 150px 0 50px;
+    }
+}
+
+.scroll-down {
+    right: 0;
+    bottom: 60px;
+    z-index: 10;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        display: none;
+    }
+
+    .icon {
+        width: 28px;
+        height: 42px;
+        border-radius: 11px;
+        border: 2px solid #fff;
+
+        &__line {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 15px;
+            display: block;
+            background: linear-gradient(to top, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
+            background-position: 0 -10px;
+            background-size: 100% 200%;
+            animation: scrollDown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+
+            @keyframes scrollDown {
+                0% {
+                    background-position: 0 -10px;
+                }
+
+                75% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 0 10px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        width: 100px;
+        top: -20px;
+        left: -76px;
+        transform: rotate(-90deg);
+        font-size: 14px;
+        color: #fff;
+    }
+}

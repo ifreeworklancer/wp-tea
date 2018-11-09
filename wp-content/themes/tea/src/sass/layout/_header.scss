@@ -1,0 +1,33 @@
+#app-header {
+    @extend %pos;
+    bottom: auto;
+    z-index: 20;
+    overflow: hidden;
+
+    .header-item {
+        position: relative;
+        padding: 25px 0;
+
+        &::before  {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: -1500px;
+            bottom: 0;
+            height: 1px;
+            background: rgba(#fff, .3);
+        }
+
+        .btn {
+            padding: 10px 30px;
+        }
+    }
+}
+
+.logo {
+    display: inline-block; 
+    
+    img {
+        width: auto;
+    }
+}

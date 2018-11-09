@@ -1,0 +1,24 @@
+#best {
+    padding: 100px 0;  
+
+    .decor-img {
+        position: absolute;
+        top: 50px;
+        left: -140px;
+        width: 215px;
+        height: 230px;
+        @extend %img;
+        z-index: -3;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 65%;
+        bottom: 5%;
+        background: #def4d9;
+        z-index: -5;
+    }
+}

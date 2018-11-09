@@ -1,0 +1,24 @@
+.app-footer {
+    padding: 25px 0;
+    background: #000000;
+
+    &--secondary {
+        @extend %pos;
+        top: auto;
+        z-index: 18;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            position: relative;
+        }
+    }
+}
+
+.footer-item {
+    color: #fff;
+
+    @media (max-width: map_get($grid-breakpoints, md)) {
+        margin-bottom: 20px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
